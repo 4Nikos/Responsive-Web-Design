@@ -1,0 +1,28 @@
+
+.logo{
+    width: 32px;
+    height: auto;
+    border-radius: 50%
+}
+
+.enhanced .nav .skip {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #bd3939;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+ }
+ .enhanced .nav ul {
+    max-height: 0;
+    overflow: hidden;
+ }
+ .enhanced .nav ul.open {
+    max-height: 20em;
+ }
+ .enhanced .nav ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out;
+ }

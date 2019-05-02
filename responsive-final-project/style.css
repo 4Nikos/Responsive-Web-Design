@@ -1,0 +1,330 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+img,
+video {
+    height: auto;
+    max-width: 100%;
+}
+
+.container {
+    position: relative;
+}
+.enter{
+    z-index: 7;
+    top: 5rem; right: 3rem;
+    position: absolute;
+    background: #353535;
+    font-family: 'Staatliches', cursive;
+    font-size: .7rem;
+    color: antiquewhite;
+    height: 1rem;
+    width: 3rem;
+    text-align: center;
+}
+.enter:hover{
+    background-color: gold;
+    color: black
+}
+
+.menuItem{
+    color: white;
+}
+.menuItem:hover{
+    color: gold
+}
+.center {
+    position: absolute;
+    left: 0;
+    top: 1%;
+    width: 100%;
+    text-align: center; 
+}
+
+summary {
+    font-family: 'Staatliches', cursive;
+    border: 2px solid rgb(112, 112, 112);
+    background: rgb(61, 61, 61);
+    color: white;
+    display: inline;
+    /* This sizes around content */
+    padding: .1rem 1.5rem;
+    user-select: none;
+    min-width: 100px;
+
+    /* This prevents the summary from being selected like normal text when clicked. It doesn't affect screen reader abiltiy to speak text */
+}
+
+summary:hover {
+    cursor: pointer;
+    color: antiquewhite;
+    background: rgb(61, 61, 61, 0.5);
+    width: 20%;
+    border-radius: 5px;
+    text-align: center;
+    /* make the cursor behave like a standard clickable object */
+}
+
+summary::-webkit-details-marker {
+    display: none;
+    /* Removes disclosure triangles */
+
+}
+
+ul li {
+    margin: 1rem 0;
+    font-family: 'Baloo Thambi', cursive;
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+}
+
+details[open] summary {
+    background: rgb(124, 124, 123);
+    color: black;
+}
+
+ul {
+    background: rgba(151, 151, 151, 0.3);
+}
+
+details ul {
+    padding: 1rem;
+    transition: max-height 1s ease-out;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+ /* Create two equal columns that floats next to each other */
+ .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  .column img {
+    margin-top: 12px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+  .header {  
+    /* This section calls the slideInFromLeft animation */
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    display: flex;
+justify-content: center;
+    background-color: #353535;
+    color: #ffffff;
+    padding: 15px;
+  }
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #696969;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.menu li:hover {
+    background-color: #696969;
+}
+
+.aside {
+    background-color: #696969;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.footer {
+    background-color: #696969;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+.footer img{
+    height: 40px;
+    width: 40px;
+}
+
+/* For Mobile Phones: ------------------------------------------------------------------*/
+[class*="col-"] {
+    width: 100%;
+}
+body{
+    background-color: rgb(200, 200, 200);
+}
+.films img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    min-width: 200px;
+    
+  }
+
+.films{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0 4px;
+    display: block;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+
+/* For Tablet: ------------------------------------------------------------------*/
+
+@media only screen and (min-width: 500px) {
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+    body {
+        background-color: rgb(170, 170, 170);
+    }
+    .enter{
+        z-index: 7;
+        top: 300px; right: 100px;
+        background: #353535;
+        font-family: 'Staatliches', cursive;
+        font-size: 1.5rem;
+        color: antiquewhite;
+        height: 40px;
+        width: 160px;
+        text-align: center;
+    }
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+}
+
+/* For Desktop: ------------------------------------------------------------------*/
+@media screen and (min-width: 800px) {
+
+    body {
+        background-color: rgb(150, 150, 150);
+    }
+    .enter{
+        z-index: 7;
+        top: 300px; right: 150px;
+        background: #353535;
+        font-family: 'Staatliches', cursive;
+        font-size: 1.5rem;
+        color: antiquewhite;
+        height: 40px;
+        width: 160px;
+        text-align: center;
+    }
+    .films img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        
+      }
+    
+    .films{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 0 4px;
+        display: block;
+    }
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+      }
+}

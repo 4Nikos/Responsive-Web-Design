@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .flex {
+                /* basic styling */
+                width: 350px;
+                height: 200px;
+                border: 1px solid #555;
+                font: 14px Arial;
+     
+                /* flexbox setup */
+                display: flex;
+                flex-direction: row;
+            }
+     
+            .flex > div {
+                flex: 1 1 auto;
+                width: 30px; /* To make the transition work nicely. (Transitions to/from
+                            "width:auto" are buggy in Gecko and Webkit, at least.
+                            See http://bugzil.la/731886 for more info.) */
+                transition: width 0.7s ease-out;
+                padding: 5px;
+            }
+     
+            /* colors */
+            .flex > div:nth-child(1){ background: lightgreen; }
+            .flex > div:nth-child(2){ background: lightcoral; }
+            .flex > div:nth-child(3){ background: lightblue; }
+     
+            .flex > div:hover {
+                width: 200px;
+            }
+     
+        </style>
+
+    </head>
+    <body>
+        <p>Flexbox Example</p>
+        <div class="flex">
+           <div>First Column</div>
+           <div>Second Column</div>
+           <div>Third Column</div>
+        </div>
+    </body>
+</html>
